@@ -29,7 +29,6 @@ public class UserInsertServlet extends HttpServlet {
 			throws ServletException, IOException {
 		Connection users = null;
 		try {
-			request.setCharacterEncoding("utf-8");//←これを忘れると入力データが文字化けする
 			users = DBConnection.openConnection();
 			String id = request.getParameter("insertId");
 			String name = request.getParameter("insertName");
